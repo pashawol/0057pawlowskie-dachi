@@ -1,0 +1,58 @@
+
+mixin modal() 
+ 
+	//- #modal-win.modal.fade(tabindex='-1', role='dialog', aria-labelledby='modal-win', aria-hidden='true')
+		
+	//- 	div( class="   modal-dialog  modal-dialog-centered  " role='document') 
+	//- 		+form-wrap()(class=" modal-content modal-win ")
+	//- 			button.close.mfp-close(type='button', data-dismiss='modal', aria-label='Close')  ×
+	//- 			+input("tel","Введите ваш телефон")(name="tel" required) 
+				
+	//- 			+e.BUTTON.btn.btn.btn-accent.btn-block Отправить
+	//- 			+b.wrap-polite
+	//- 				+b.custom-input.polite
+	//- 					+b.LABEL.custom-input.polite
+	//- 						+e.INPUT.input.__input-radio(type="checkbox" checked name="polite" required value="")
+	//- 						+e.SPAN.lab
+	//- 						| Даю 
+	//- 						| 
+	//- 						span.link( data-toggle='modal', data-target='#exampleModal2') согласие 
+
+	//- 						| на хранение и обработку   персональных данных
+	
+ 
+
+	//- #thanks.modal.fade(tabindex='-1', role='dialog', aria-labelledby='thanks', aria-hidden='true')
+	//- 	div( class=" ttext-center  modal-dialog  modal-dialog-centered  " role='document') 
+	//- 		+form-wrap()(class=" modal-content modal-win ")
+	//- 			button.close.mfp-close(type='button', data-dismiss='modal', aria-label='Close')  ×
+	//- 			br
+	//- 			.h2 Заявка принята
+	//- 			br
+	//- 			.h3 Скоро с Вами свяжутся
+	//- 			br 
+
+	+form-wrap()(id="modal-call" class="zoom-anim-dialog mfp-hide modal-win modal-form" )
+		.text-center
+			+e.title.h3.ttu Обратный звонок
+			p Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течении 15&nbsp;минут
+		+input("text","Ваше Имя")(required) 
+		+input("tel","Ваш телефон")(required)
+		//- +input("email","Ваше email")(required)
+		//- +text( "Комментарий")
+		+e.INPUT.btn.btn.btn-block.btn-warning.mb-4(type="submit" value="Рассчитать") 
+		+polite()
+	// #modal-call
+	
+	div(id="modal-news" class="zoom-anim-dialog mfp-hide modal-win " )
+		p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec orci purus, luctus vitae dignissim eu, iaculis sed purus. Vivamus faucibus, ipsum nec aliquet viverra, leo mauris condimentum ligula, sit amet sagittis enim ligula quis arcu. Nam egestas tortor id nisi porttitor mattis. In tortor ante, ultricies in suscipit a, tempus non massa. Vivamus et auctor mi. Fusce vel massa nulla. Phasellus nec eros mauris, et scelerisque orci. Donec malesuada orci vitae nulla accumsan porta a id massa. Quisque accumsan iaculis magna sit amet fringilla. Maecenas consequat, magna eget tincidunt semper, odio nibh rutrum mi, id feugiat ante nisi eu risus. Vestibulum nunc orci, rhoncus a placerat in, ultricies in mi. Cras mattis varius eros, vel fringilla nisi suscipit eget.
+
+		p Quisque scelerisque sagittis nulla at porttitor. Mauris a justo et tellus interdum tristique. Sed id augue vitae urna euismod commodo aliquet a quam. Pellentesque arcu velit, cursus et malesuada ut, consequat et diam. Nullam erat sem, rhoncus id ullamcorper vitae, rhoncus et arcu. In ultricies ultricies nulla, ut rutrum nisi iaculis at. Donec eu magna a metus ornare faucibus. Fusce aliquet faucibus ultricies. Morbi semper, est id tincidunt gravida, sem arcu adipiscing lacus, ac bibendum nulla leo eu purus. Quisque nec diam sed risus consectetur a ccumsan quis quis nibh. Vestibulum id purus lorem.
+
+
+
+
+
+	// #modal-news
+
+	// modal

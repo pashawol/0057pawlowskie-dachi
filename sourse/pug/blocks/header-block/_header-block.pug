@@ -1,0 +1,26 @@
+mixin header-block()
+	// start header-block
+	+b.header-block#header-block
+		.container
+			.row.justify-content-center
+				.col-auto
+					+e.soc-link(href="#" target="_blank")
+						+icon('vk')
+				
+				.col-auto
+					+e.soc-link(href="#" target="_blank")
+						+icon('inst')
+			.row.justify-content-center.no-gutters
+				+e.tel-link.col-auto(href="tel:+7(905)269-11-06") +7 (905) 269-11-06
+					+icon('tel')
+				
+				+e.tel-link.col-auto(href="tel:+7(812)458-03-62") 
+					+icon('tel')
+					| +7 (812) 458-03-62
+			.text-center
+				+e.arrow-foot
+					img.res-i(src="img/arrow-foot.png", alt="")
+
+					
+
+	// end header-block

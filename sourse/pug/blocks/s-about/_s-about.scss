@@ -1,0 +1,165 @@
+.s-about {
+	@include media-breakpoint-up(sm){
+
+		background-image: url(../img/about-bg.jpg);
+		background-repeat: no-repeat;
+	}
+	&__container{
+
+		position: relative;
+		z-index: 2;
+		&::after{
+			content:'';
+			position: absolute;
+			background-color: #ffffff;
+			height: 100%;
+			left: 100%;
+			width: 100vw;
+			top: 0;
+			
+		}
+	}
+	.h3{
+		font-weight: bold;
+		text-transform: uppercase;
+		padding-bottom: em(10);
+	}
+	small{
+		font-size: 11px;
+	}
+	$a: 12px;
+	$b: 50px;
+	&__group{
+
+		@include media-breakpoint-up(sm) {
+			
+			padding-right: 15px;
+			margin-right: -15px;
+		}
+		p{
+							@include media-breakpoint-up(lg) {
+					@include rfs(20);
+							}
+					margin-bottom: 0;
+				}
+		background-color: #ffffff;
+		padding-bottom: 30px;
+		@include media-breakpoint-up(lg) {
+			
+			padding-left: 70px;
+		}
+					@include media-breakpoint-up(sm) {
+
+						padding-left: 30px;
+					}
+			  
+		position: relative;
+		&-inner{
+			&::before{
+				content: '';
+				background-color: #ffffff;
+				width: 20px;
+				position: absolute;
+				right: 100%;
+				top: #{$a * 2};
+				height: calc(100%  - #{$a * 2});
+			}
+		}
+		&::before{
+			content: '';
+			position: absolute;
+			@include triangle(20px $a, #fff, down-right);
+			right: 100%;
+			top: $a;
+		}
+		
+		&::after{
+			content: '';
+			position: absolute;
+			@include triangle(20px $a, #fff, up-right);
+			right: 100%;
+			top: 0;
+		}
+
+		&:nth-child(1){
+			padding-top: $b;
+			.s-about__group-inner{
+				&::before{
+					top: #{$a * 2 + $b};
+				height: calc(100%  - #{$a * 2 + $b});
+				}
+				
+				&::after{
+					content: '';
+					background-color: #ffffff;
+					width: 20px;
+					position: absolute;
+					right: 100%;
+					top: 0;
+				height: (50px);
+				}
+
+			}
+			&::before{
+				top: (50px + $a);
+			}
+			&::after{
+				top: 50px;
+
+			}
+		}
+
+	}
+
+	&__img-wrap{
+		margin-bottom: 20px;
+	}
+	&__col{
+		margin-bottom: 30px;
+	}
+
+	.line{
+		// position: absolute;
+		@include media-breakpoint-up(lg) {
+
+			position: relative;
+			z-index: 2;
+			&::before{
+				// content: '';
+				content: '';
+				position: absolute;
+				background-color: rgba($color: #000000, $alpha: .4);	
+				top: 0;
+				right: -10px;
+				height: 100%;
+				width: 1000vw;
+				z-index: -1;
+			}
+		}
+	}
+		 
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(xs) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(xs) {}
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(xs) {} 
+
+}

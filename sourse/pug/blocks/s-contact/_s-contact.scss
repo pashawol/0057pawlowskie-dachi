@@ -1,0 +1,117 @@
+.s-contact {
+	//
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(xs) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(xs) {}
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(xs) {} 
+
+}
+
+.tabs {
+	&__caption{
+		background-color: #1c2326;
+		flex-direction: column;
+		justify-content: flex-end;
+		margin-left: auto;
+		display: flex;
+		.container{
+			
+			position: relative;
+			padding-bottom: 20px;
+		}
+	}
+	&__btn{
+		text-align: right;
+		color: #ffffff;
+		// max-width: 270px;
+		margin-bottom: 10px;
+		text-transform: uppercase;
+		&.active,
+		&:hover{
+			color: $primary;
+		}
+	}
+	&__map-wrap{
+		position: relative;
+		height: 583px;
+		iframe{
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100% !important;
+			height: 100% !important;
+		}
+	}
+
+	&__block{
+		@include media-breakpoint-up(md) {
+
+			position: absolute;
+			right: 0;
+			top: 100%;
+		}
+		position: relative;
+		background-color: #ffffff;
+		z-index: 20;
+		max-width: 580px;
+		.form-wrap{
+			padding: 30px 30px;
+			&__title{
+				
+				text-transform: uppercase;
+			}
+			label{
+				display: block;
+				width: 100%;
+			}
+		}
+	}
+	&__text-block{
+		padding: 30px 30px;
+		color: #ffffff;
+		background-color: #1c2326;
+		position: absolute;
+		top: 0;	width: 100%;
+		left: 0;
+		font-size: 15px;
+		// height: 100%;
+	}
+	&__title{
+		font-size:20px;
+		text-transform: uppercase;
+		margin-bottom: 15px;
+		position: relative;
+		&::before{
+			content: url(../img/top.png);
+			position: absolute;
+			right: 0;
+			cursor: pointer;
+		}
+	}
+	&__group{
+			border-top: 1px solid rgba($color: #ffffff, $alpha: .2);
+			padding: 20px 0;
+
+	}	
+		&__sub-title{
+		}
+}

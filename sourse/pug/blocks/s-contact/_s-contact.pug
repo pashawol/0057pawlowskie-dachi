@@ -1,0 +1,55 @@
+mixin s-contact()
+	// start s-contact
+	+b.s-contact#s-contact&attributes(attributes)
+		+b.tabs 
+			+e.caption.text-rigth
+				.container
+					+e.btn.active карта офис <
+					+e.btn карта павловские дачи <
+					+e.block
+						+form-wrap
+							+input('text','ваше имя*')
+							+input('email','ваш e-mail*')
+							+input('tel','ваш номер телефона*')
+							+polite
+							button.btn.btn-block.btn-outline-primary.ttu(type="submit") заказать обратный звонок
+						+e.text-block
+							+e.title.toggle-form-js контакты
+							+e.group
+								+e.sub-title.ttu Адрес офиса продаж: 
+								+e.text.ttu Санкт-Петербург • В.О. 26 линия  •  д. 15 кв. 2 
+									br
+									| Лит. А БЦ «Биржа»  •   офис 915
+
+							
+							+e.group
+								+e.sub-title.ttu Телефон офиса продаж: 
+								+e.text.ttu
+									a.text-white(href="href:+7(812)458-03-62") +7 (812) 458-03-62
+									br
+									a.text-white(href="href:+7(905)269-11-06") +7 (905) 269-11-06
+							
+							+e.group
+								+e.sub-title.ttu Телефон мобильного офиса продаж 
+								+e.text.ttu.text-center Viber  •  WhatsApp  •  VK:
+									br
+									| +7 (812) 458-03-62
+							button.btn.btn-block.btn-outline-primary.ttu.text-center.toggle-form-js(type="button") заказать обратный звонок
+							
+
+
+
+
+
+
+
+ 
+
+			+e.wrap
+				+e.content.active
+					+e.map-wrap
+						<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2950033.4543793164!2d26.803513960891614!3d52.61423341203361!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z0LPRg9Cz0Lsg0LrQsNGA0YLQsA!5e0!3m2!1sru!2sby!4v1555317343690!5m2!1sru!2sby" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+				+e.content
+					+e.map-wrap
+						<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d41148.020831811475!2d37.59533798238004!3d55.74228165505578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z0LPRg9Cz0Lsg0LrQsNGA0YLQsA!5e0!3m2!1sru!2sby!4v1555317365979!5m2!1sru!2sby" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+	// end s-contact
