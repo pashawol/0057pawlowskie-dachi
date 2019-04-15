@@ -15,36 +15,36 @@ mixin s-form()
 							p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. 
 					.col
 						+form-wrap
-							label.row.d-flex
-								.col-sm-auto
-									+e.img-wrap: img(src="img/tel.png", alt="")
+							label: span.row
+								span.col-sm-auto
+									+e.SPAN.img-wrap: img(src="img/tel.png", alt="")
 									span.ttu Телефон:
-								.col
+								span.col
 									input.form-control(type="text")
 							
-							label.row.d-flex
-								.col-sm-auto
-									+e.img-wrap: img(src="img/user.png", alt="")
+							label: span.row
+								span.col-sm-auto
+									+e.SPAN.img-wrap: img(src="img/user.png", alt="")
 									span.ttu ФИО:
-								.col
+								span.col
 									input.form-control(type="tel")
 							
 							.row
 								.col
-									+e.img-wrap: img(src="img/place.png", alt="")
+									+e.SPAN.img-wrap: img(src="img/place.png", alt="")
 									span.ttu НОМЕР УЧАСТКА:
 								.col-auto
 									span.number 0
 									span.number 0
 									span.number 1
 							+polite
-							label.row.d-flex
-								.col-12
-									+e.img-wrap: img(src="img/mess.png", alt="")
+							label: span.row
+								span.col-12
+									+e.SPAN.img-wrap: img(src="img/mess.png", alt="")
 									span.ttu СООБЩЕНИЕ:
-								.col
+								span.col
 									textarea.form-control
-									button.btn.btn-dark.btn-block.ttu(type='submit') отправить
+							button.btn.btn-dark.btn-block.ttu(type='submit') отправить
 
 							
 

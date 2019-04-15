@@ -2,6 +2,7 @@
 	background-image: url(../img/form-bg.jpg);
 	@include bgs;
 	.form-wrap{
+		
 		label.row{
 			align-items: center;
 			.col-sm-auto{
@@ -16,7 +17,7 @@
 					margin-bottom: 15px;
 				}
 		&__img-wrap{
-			display: inline-block;
+			display: inline-block !important;
 			margin-right: 10px;
 			width: 25px;
 		}
