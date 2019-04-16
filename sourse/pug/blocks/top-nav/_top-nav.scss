@@ -1,6 +1,6 @@
 .top-nav {
 	padding-top: 15px;
-	// padding-bottom: 20px;
+	padding-bottom: 20px;
 	background-color: rgba($color: #000, $alpha: .1);
 	.row{
 		align-items: center;
@@ -12,6 +12,10 @@
 		list-style-type: none;
 		display: flex;
 		justify-content: space-between;
+		@include media-breakpoint-up(xl) {
+			padding-left: 90px;
+			// padding-right: 70px;
+		}
 	}
 
 	&__link{
