@@ -1,5 +1,5 @@
 .top-nav {
-	padding-top: 5px;
+	padding-top: 15px;
 	// padding-bottom: 20px;
 	background-color: rgba($color: #000, $alpha: .1);
 	.row{
@@ -22,19 +22,25 @@
 		font-weight: bold;
 		font-size: 12px;
 		.icon{
-			font-size: 60px;
+			font-size: 45px;
 			margin-bottom: 15px;
+			width: 1em;
 			&-LIChNYJ_KABINET{
 				// font-size: 70px;
-					width: 60px;
 			}
 		}
 		
 	}
 	
 	&__item {
-		display: inline-block;
+		// display: inline-block;
+
+		// flex-grow: 1;
 		list-style-type: none;
+		text-align: center;
+		// width: 100px;
+		width: auto;
+		
 		&:nth-child(n + 3){
 			a{
 
@@ -154,7 +160,7 @@ $h: em(2);
 	top: 0;
 	// left: 0;
 	right: 0;
-	img{
+	.icon{
 		display: none;
 	}
 	transform: translate(100%, 0);
