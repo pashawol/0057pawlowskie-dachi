@@ -26,11 +26,21 @@
 				font-size: 12px;
 				padding-left: 2px;
 				padding-right: 2px;
+				padding-top: 4px;
+				padding-bottom: 4px;
 				@include media-breakpoint-up(xl) {
 
 					min-width:  calc(50% - 8px);
 				}
-			}&__col{
+			}
+			&__col{
+				.row{
+					height: 100%;
+				}
+				.col{
+					display: flex;
+					flex-direction: column; 
+				}
 				@include media-breakpoint-up(lg) {
 
 					margin-bottom: 140px;
@@ -51,6 +61,41 @@
 		&__img-wrap{
 			margin-bottom: 15px;
 			width: 130px;
+		}
+		&__text{
+			display: flex;
+					flex-direction: column;
+					flex-grow: 1;
+					font-size: 14px;
+					
+
+					// justify-content: center;	
+		}
+		&__text-body{
+			display: flex;
+					flex-direction: column;
+					justify-content: center;
+					flex-grow: 1;
+					position: relative;
+					padding-left: 15px;
+					margin-bottom: 10px;
+					&::before{
+
+						background-color: #f2f2f2;
+						opacity: 0.15;
+						left: 0;
+					}
+					&::after,
+					&::before{
+						content: '';
+						position: absolute;
+						height: calc(100%  - 15px);
+						width: 1px; 
+					}
+					&::after{
+						background-color: #ffffff; 
+						right: 0;
+					}
 		}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

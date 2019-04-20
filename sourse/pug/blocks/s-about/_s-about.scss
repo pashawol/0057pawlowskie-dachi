@@ -1,4 +1,7 @@
 .s-about {
+	.align-self-end{
+		padding-bottom: 40px;
+	}
 	@include media-breakpoint-up(sm){
 
 		background-image: url(../img/about-bg.jpg);
@@ -135,6 +138,12 @@
 				width: 1000vw;
 				z-index: -1;
 			}
+		}
+	}
+	a{
+		.icon{
+			font-size: 1em;
+			margin-right: em(10);
 		}
 	}
 		 
