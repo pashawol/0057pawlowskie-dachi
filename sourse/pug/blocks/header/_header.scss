@@ -3,8 +3,8 @@
 	background-color: #e7e7e7;
   background-image: url(../img/head-bg.jpg);
   @include bgs;
-  height: 680px;
-  max-height: 100vh;
+  min-height: 680px;
+  // max-height: 100vh;
   // 
   @include media-breakpoint-up(xl) {}
 

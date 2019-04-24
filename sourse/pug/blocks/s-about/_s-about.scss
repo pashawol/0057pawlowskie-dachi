@@ -1,6 +1,20 @@
 .s-about {
 	.align-self-end{
-		padding-bottom: 40px;
+		padding-bottom: 80px;
+		@include media-breakpoint-up(xl) {
+			small{
+					font-size: 13px !important;
+				small{
+					font-size: 10px !important;
+				}
+			} 
+			p{
+
+				// margin-right: -15px; 
+				// margin-left: -10px;
+			}
+			// padding-left: 0;
+		}
 	}
 	@include media-breakpoint-up(sm){
 
@@ -25,15 +39,28 @@
 	.h3{
 		font-weight: bold;
 		text-transform: uppercase;
-		padding-bottom: em(10);
+		padding-bottom: em(5);
 	}
 	small{
-		font-size: 11px;
+		font-size: rem(12px);
+	}
+	.col{
+		z-index: 4;
 	}
 	$a: 12px;
 	$b: 50px;
 	&__group{
+		position: relative;
+		z-index: 2;
+		@include media-breakpoint-up(xl) {
+			// margin-right: -80px;
 
+		}
+	
+		@include media-breakpoint-up(lg) {
+
+			margin-left: 20px;
+		}
 		@include media-breakpoint-up(sm) {
 			
 			padding-right: 15px;
@@ -42,14 +69,15 @@
 		p{
 							@include media-breakpoint-up(lg) {
 					@include rfs(20);
+					// margin-left: 30px;
 							}
 					margin-bottom: 0;
 				}
 		background-color: #ffffff;
-		padding-bottom: 30px;
+		padding-bottom: rem(26);
 		@include media-breakpoint-up(lg) {
 			
-			padding-left: 70px;
+			padding-left: 80px;
 		}
 					@include media-breakpoint-up(sm) {
 
@@ -58,6 +86,9 @@
 			  
 		position: relative;
 		&-inner{
+			// margin-left: 15px;
+			// position: relative;
+			z-index: 2;
 			&::before{
 				content: '';
 				background-color: #ffffff;
@@ -110,6 +141,14 @@
 				top: 50px;
 
 			}
+		}	
+		&--last{
+			padding-bottom: 10px !important;
+
+			p{
+			 
+		// margin-bottom: 0;
+	}
 		}
 
 	}
@@ -119,24 +158,27 @@
 	}
 	&__col{
 		margin-bottom: 30px;
+
 	}
 
 	.line{
 		// position: absolute;
 		@include media-breakpoint-up(lg) {
+		 
 
 			position: relative;
 			z-index: 2;
+			padding-bottom: 5px;
 			&::before{
 				// content: '';
 				content: '';
 				position: absolute;
 				background-color: rgba($color: #000000, $alpha: .4);	
 				top: 0;
-				right: -10px;
+				right: -60px;
 				height: 100%;
 				width: 1000vw;
-				z-index: -1;
+				z-index: -2;
 			}
 		}
 	}
@@ -171,4 +213,8 @@
 	@include media-breakpoint-down(sm) {}
 	@include media-breakpoint-down(xs) {} 
 
+}
+
+strong{
+	font-weight: bold !important;
 }
